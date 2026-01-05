@@ -128,17 +128,3 @@ Frontend (`frontend/.env`)
 - Event calendar with RSVP  
 
 ---
-
-## 👥 Contributors
-
-- **Gayathri M.A** — UI/UX, Landing Page, Profile UI, Search & Posts Listing  
-- **John Antony** — Backend (Dashboard, Post Creation)  
-- **Joseph Hadlee** — Authentication, Job Posting, UI consistency  
-- **Muhammad Rafi V.A** — Backend (Login, Job Listing, Community), DB integration  
-
----
-
-## 📜 License
-
-Developed as part of **APJ Abdul Kalam Technological University (KTU)** mini-project requirements.  
-All rights reserved © 2025 FISAT Forge Team.
