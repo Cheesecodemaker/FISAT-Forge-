@@ -1,0 +1,515 @@
+/* profile.css */
+:root {
+    --primary-navy: #080836;
+    --accent-orange: #FF6B00;
+    --accent-blue: #0095FF;
+    --text-white: #FFFFFF;
+    --light-gray: #f4f6f9;
+    --border-gray: #e0e0e0;
+    --text-dark: #333333;
+    --text-muted: #666666;
+    --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    --success-green: #28a745;
+    --warning-yellow: #ffc107;
+    --danger-red: #dc3545;
+    --linkedin-blue: #0077B5;
+    --github-dark: #24292e;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-gray);
+    color: var(--text-dark);
+  }
+  .followers-count {
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 8px;
+  }
+  
+  
+  .profile-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* navbar44 styles (reusing from existing navbar44) */
+  .navbar44 {
+    background-color: var(--primary-navy);
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  .navbar44-container {
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-image {
+    height: 100px;
+    width: auto;
+    margin-left: -20px;
+    margin-top: 10px;
+  }
+  
+  .site-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+  }
+  
+  .site-title h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-white);
+    margin: 0;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin: 0;
+    font-style: italic;
+  }
+  
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .icon-button {
+    background: none;
+    border: none;
+    color: var(--text-white);
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  .icon-button:hover, .icon-button.active {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: var(--accent-orange);
+    color: var(--text-white);
+    font-size: 0.7rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Main content */
+  .profile-content {
+    margin-top: 80px; /* Same as navbar44 height */
+    flex: 1;
+    padding: 30px 20px;
+  }
+  
+  .profile-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* Edit mode toggle */
+  .edit-mode-toggle {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  .edit-button {
+    background-color: var(--accent-blue);
+    color: var(--text-white);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+  }
+  
+  .edit-button.save-mode {
+    background-color: var(--success-green);
+  }
+  
+  .edit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Profile header */
+  .profile-header {
+    display: flex;
+    background: linear-gradient(to right, var(--primary-navy), #1a1a5a);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    color: var(--text-white);
+    box-shadow: var(--card-shadow);
+  }
+  
+  .profile-image-container {
+    position: relative;
+    margin-right: 30px;
+  }
+  
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--text-white);
+    background-color: #f0f0f0;
+  }
+  
+  .image-upload-label {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: var(--accent-orange);
+    color: var(--text-white);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .image-upload-label:hover {
+    transform: scale(1.1);
+  }
+  
+  .profile-info {
+    flex: 1;
+  }
+  
+  .profile-info h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+  
+  .profile-info h3 {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: normal;
+    margin-bottom: 15px;
+  }
+  
+  .bio-section {
+    margin-top: 15px;
+    line-height: 1.6;
+  }
+  
+  /* Profile cards */
+  .profile-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+  }
+  
+  .profile-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 25px;
+  }
+  
+  .card-header {
+    background: linear-gradient(to right, var(--primary-navy), #1a1a6a);
+    color: var(--text-white);
+    padding: 15px 20px;
+  }
+  
+  .card-header h2 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  /* Contact & Social section */
+  .contact-social-card {
+    grid-column: 1 / -1;
+  }
+  
+  .contact-info, .social-links {
+    margin-bottom: 20px;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .info-icon {
+    font-size: 1.2rem;
+    margin-right: 15px;
+    color: var(--primary-navy);
+  }
+  
+  .info-icon.linkedin {
+    color: var(--linkedin-blue);
+  }
+  
+  .info-icon.github {
+    color: var(--github-dark);
+  }
+  
+  .info-item a {
+    color: var(--accent-blue);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .info-item a:hover {
+    text-decoration: underline;
+    color: var(--accent-orange);
+  }
+  
+  /* Professional details */
+  .professional-card, .education-card {
+    grid-column: span 1;
+  }
+  
+  .info-row {
+    margin-bottom: 15px;
+  }
+  
+  .info-label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+  
+  .info-value {
+    font-size: 1.05rem;
+  }
+  
+  /* Education section */
+  .education-item {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    margin-bottom: 15px;
+  }
+  
+  .education-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .education-degree {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--github-dark);
+  }
+  
+  .education-institution {
+    margin-bottom: 5px;
+  }
+  
+  .education-year {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+  
+  /* Skills section */
+  .skills-card {
+    grid-column: span 1;
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .skill-tag {
+    background: linear-gradient(45deg, var(--accent-orange), var(--accent-blue));
+    color: var(--text-white);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: inline-block;
+  }
+  
+  /* Edit mode styles */
+  .form-group {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 0.9rem;
+  }
+  
+  .form-group input, .form-group textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: var(--text-dark);
+    font-size: 1rem;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    align-items: flex-start;
+  }
+  
+  .year-group {
+    max-width: 150px;
+    flex-shrink: 0;
+  }
+  
+  .education-item.edit-mode {
+    position: relative;
+    padding: 20px;
+  }
+  
+  .remove-button {
+    background-color: var(--danger-red);
+    color: var(--text-white);
+    border: none;
+    border-radius: 5px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .remove-button:hover {
+    background-color: #c82333;
+  }
+  
+  .add-new-section {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px dashed #ccc;
+  }
+  
+  .add-new-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--accent-blue);
+  }
+  
+  .add-button {
+    background-color: var(--success-green);
+    color: var(--text-white);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+  }
+  
+  .add-button:hover {
+    background-color: #218838;
+  }
+  
+  /* Edit mode styles for info items */
+  .info-item input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  /* Edit mode styles for professional info */
+  .professional-info input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  .logout-button {
+    background-color: #ebac0e;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s;
+}
+
+.logout-button:hover {
+    background-color: #FF6B00;
+}
+.logo img {
+  height: 100px; /* Adjust height */
+  width: auto;  /* Maintain aspect ratio */
+}

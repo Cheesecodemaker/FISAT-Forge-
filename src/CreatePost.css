@@ -1,0 +1,105 @@
+.create-post-container {
+    background-color: var(--bg-white, #ffffff);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .create-post-container:hover {
+    transform: translateY(-2px);
+  }
+  
+  .create-post-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary, #1a1a1a);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-color, #e5e7eb);
+    padding-bottom: 0.75rem;
+  }
+  
+  .create-post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-secondary, #4b5563);
+  }
+  
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color, #e5e7eb);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+    background-color: var(--input-bg, #f9fafb);
+  }
+  
+  .form-input:focus,
+  .form-textarea:focus {
+    outline: none;
+    border-color: var(--primary-color, #2563eb);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    background-color: #ffffff;
+  }
+  
+  .form-textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  .form-input::placeholder,
+  .form-textarea::placeholder {
+    color: var(--placeholder-color, #9ca3af);
+  }
+  
+  .tags-input {
+    font-size: 0.875rem;
+  }
+  
+  .submit-button {
+    background-color: var(--primary-color, #2563eb);
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+    align-self: flex-start;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover:not(:disabled) {
+    background-color: var(--primary-dark, #1d4ed8);
+    transform: translateY(-1px);
+  }
+  
+  .submit-button:disabled {
+    background-color: var(--disabled-color, #93c5fd);
+    cursor: not-allowed;
+  }
+  
+  @media (max-width: 640px) {
+    .create-post-container {
+      padding: 1.5rem;
+    }
+  
+    .submit-button {
+      width: 100%;
+    }
+  }

@@ -1,0 +1,255 @@
+/* Admin Dashboard Layout */
+.admin-dashboardx {
+    min-height: 100vh;
+    background-color: #f5f7fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .admin-headerx {
+    background-color: #080836;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-headerx h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .logout-btnx {
+    background-color: #e7e13c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+  }
+  
+  .logout-btnx:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Dashboard Container */
+  .dashboard-containerx {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  }
+  
+  .dashboard-containerx h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eaeaea;
+  }
+  
+  /* Form Styles */
+  .event-formx {
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+  }
+  
+  .form-groupx {
+    margin-bottom: 1rem;
+  }
+  
+  .form-groupx label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #34495e;
+  }
+  
+  .form-rowx {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .form-rowx .form-groupx {
+    flex: 1;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  .form-actionsx {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .add-btnx, .update-btnx {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+  }
+  
+  .add-btnx:hover, .update-btnx:hover {
+    background-color: #2980b9;
+  }
+  
+  .cancel-btnx {
+    background-color: #95a5a6;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+  }
+  
+  .cancel-btnx:hover {
+    background-color: #7f8c8d;
+  }
+  
+  /* Event List Styles */
+  .events-sectionx h3 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .event-listx {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .event-itemx {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #fff;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #3498db;
+    transition: transform 0.2s;
+  }
+  
+  .event-itemx:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-contentx {
+    flex: 1;
+  }
+  
+  .event-contentx h4 {
+    margin: 0 0 0.5rem 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+  }
+  
+  .event-descriptionx {
+    color: #34495e;
+    margin: 0.5rem 0;
+  }
+  
+  .event-metax {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-top: 0.5rem;
+  }
+  
+  .event-datesx, .event-conductorx {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  
+  .event-actionsx {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .edit-btnx, .delete-btnx {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+  }
+  
+  .edit-btnx {
+    background-color: #f39c12;
+    color: white;
+  }
+  
+  .edit-btnx:hover {
+    background-color: #d35400;
+  }
+  
+  .delete-btnx {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .delete-btnx:hover {
+    background-color: #c0392b;
+  }
+  
+  .no-eventsx {
+    text-align: center;
+    padding: 2rem;
+    color: #7f8c8d;
+    font-style: italic;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .form-rowx {
+      flex-direction: column;
+      gap: 0;
+    }
+    
+    .event-itemx {
+      flex-direction: column;
+    }
+    
+    .event-actionsx {
+      flex-direction: row;
+      margin-top: 1rem;
+      width: 100%;
+    }
+    
+    .edit-btnx, .delete-btnx {
+      flex: 1;
+    }
+  }
